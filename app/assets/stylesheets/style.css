@@ -1,0 +1,19 @@
+body {
+  background-color: rgb(175, 234, 241);
+}
+
+.image_tag {
+  align-items: center;
+}
+
+.alert {
+  color: red;
+  font-size: large;
+  background-color: rgb(160, 226, 235);
+}
+
+.notice {
+  color: black;
+  font-size: large;
+  background-color: rgb(236, 227, 171);
+}

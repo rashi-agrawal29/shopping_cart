@@ -1,0 +1,23 @@
+<%= form_with model: product do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :product_name, required: true, autofocus: true, placeholder: "Enter product name" %>
+  </p>
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_field :description, required: true %>
+  </p>
+
+  <p>
+  <%= f.label :image %><br>
+  <%= f.file_field :image %>
+  </p>
+
+  <p>
+    <%= f.label :price %><br>
+    <%= f.number_field :price, step: :any, required: true %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

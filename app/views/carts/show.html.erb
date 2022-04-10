@@ -1,0 +1,19 @@
+<h2> Your Shopping Cart </h2>
+<button><%= link_to "Back to Products", root_path %></br></button>
+<ul>
+  <% @cart.line_items.each do |line_item| %>
+    <ul>
+      <li>
+        <p><h4>Item: <%= line_item.product.product_name %></h4> Price: <%= line_item.product.price %> | Quantity: <%= line_item.quantity %> </br>  Total Price: <%= line_item.total_price %></p>
+        
+            <button><%= link_to "Add one", line_item_add_path(:id => line_item), method: :post %></button>
+            <button><%= link_to "Remove one", line_item_reduce_path(:id => line_item), method: :post %></button>
+            <button><%= link_to "Remove from cart", line_item_path(line_item), method: :delete %></button>
+      </li>
+    </ul>  
+  <% end %>
+</ul>
+</br>
+<h3>Total Cart Amount: Rs. <%= @cart.cart_total%></h3>
+<button><%= link_to "Checkout", new_order_path %></br></button>
+<button><%= link_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"}%></button>

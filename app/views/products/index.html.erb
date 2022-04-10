@@ -1,0 +1,36 @@
+<h1>Shopping Application</h1></br>
+
+  <% if user_signed_in? %>
+    <%= link_to "Edit Profile", edit_user_registration_path %>
+    <button class="sign_out"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></button></br></br>
+
+    <h5> Hi, <%= current_user.name%></h5>
+    <h6> Welcome to our Shopping Application! Browse and add products of your choice to the cart :)</h6>
+    <button class="view_order"><%= link_to "View Your Orders", orders_path %></button>
+    <button ><%= link_to "Go to Cart", cart_path(@current_cart) %></button></br></br>
+    </p>
+    <p>
+    <h3>Available Products:</h3>
+    <button><%= link_to "Add New Product", new_product_path %></button></br></br>
+    <ul>
+        <% @products.each do |product| %>
+            <h4><%= product.product_name%></h4>
+            <p><%= product.description%></p>
+
+
+            <div class="image"><%= image_tag(product.image.url, alt: 'Image') if product.image? %></div>
+
+            <h4>Price: Rs.<%= product.price%></h4>
+            <p>
+            <%= link_to "Edit", edit_product_path(product) %> |
+            <%= link_to "Delete", product_path(product), method: :delete, data: {confirm: "Are you sure?"} %>
+            <%= button_to "Add #{product.product_name} to cart", line_items_path(:product_id => product.id) %>
+            </p>
+            </br>
+          <% end %>
+    </ul>
+
+  <% else %>
+    <%= link_to 'Sign In', new_user_session_path %></br>
+    <%= link_to 'Sign Up', new_user_registration_path %></br>
+  <% end %>

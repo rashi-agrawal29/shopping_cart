@@ -1,0 +1,9 @@
+<h2>Your Orders</h2>
+<ul>
+  <% @orders.each do |order| %>
+      <li>
+        Order Date&Time: <%= link_to order.created_at, order %>
+      </li>
+      </br>
+  <% end %>
+</ul>

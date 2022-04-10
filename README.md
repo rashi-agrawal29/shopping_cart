@@ -1,1 +1,2 @@
-"# shopping_cart" 
+Shopping cart application
+

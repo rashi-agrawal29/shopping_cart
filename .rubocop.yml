@@ -1,0 +1,96 @@
+AllCops:
+  Exclude:
+    - "db/**/*"
+    - "config/**/*"
+    - "script/**/*"
+    - "bin/{rails,rake}"
+    - "node_modules/**/*"
+    - "tmp/**/*"
+    - "test/**/*"
+    - "vendor/**/*"
+    - ".git/**/*"
+    - "bin/**/*"
+Metrics/BlockLength:
+  Enabled: false
+Naming/VariableNumber:
+  Enabled: false
+Layout/LineLength:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/Semicolon:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
+Style/MultilineBlockChain:
+  Enabled: false
+Lint/AssignmentInCondition:
+  Enabled: false
+Lint/DuplicateMethods:
+  Enabled: false
+Lint/ImplicitStringConcatenation:
+  Enabled: true
+Style/DoubleNegation:
+  Enabled: true
+Layout/SpaceAroundEqualsInParameterDefault:
+  Enabled: false
+Style/IdenticalConditionalBranches:
+  Enabled: false
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+Naming/ConstantName:
+  Enabled: true
+Style/CaseEquality:
+  Enabled: false
+Naming/MemoizedInstanceVariableName:
+  Enabled: true
+Style/FormatStringToken:
+  Enabled: false
+Naming/PredicateName:
+  Enabled: true
+Lint/ConstantDefinitionInBlock:
+  Enabled: true
+Lint/MissingSuper:
+  Enabled: true
+Lint/UselessAssignment:
+  Enabled: true
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/BlockDelimiters:
+  Enabled: false
+Style/BlockComments:
+  Enabled: false
+Style/HashEachMethods:
+  Enabled: true
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Metrics/ClassLength:
+  Enabled: false
+Style/NumericLiterals:
+  Enabled: false
+Layout/FirstArrayElementIndentation:
+  Enabled: false
+Style/SymbolArray:
+  Enabled: false
+Style/WordArray:
+  Enabled: false
+Style/LineEndConcatenation:
+  Enabled: false
+Style/EachWithObject:
+  Enabled: false
+Style/OptionalBooleanParameter:
+  Enabled: false
+Style/StringConcatenation:
+  Enabled: true
+Bundler/OrderedGems:
+  Enabled: false

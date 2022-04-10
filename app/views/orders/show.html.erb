@@ -1,0 +1,19 @@
+<h3>Order Details: </h3>
+
+<h4>Delivery Info</h4>
+<p>Name: <%= @order.name %></p>
+<p>Email: <%= @order.email %></p>
+<p>Contact: <%= @order.contact %></p>
+<p>Mode of Payment: <%= @order.payment_mode %></p>
+<p>Address for delivery: <%= @order.address %></p>
+</br>
+
+<h4>Order Info</h4>
+<ul>
+	<% @order.line_items.each do |item| %>
+		<li><%= item.quantity %> x <%= item.product.product_name %> = Rs. <%= item.total_price%></li>
+	<% end %>
+	<h4>Total Order Amount: Rs. <%=@order.order_total %></h4>
+</ul>
+</br>
+<button><%= link_to "Cancel Order", order_path(@order),method: :delete, data: {confirm: "Are you sure?"}%></button>
